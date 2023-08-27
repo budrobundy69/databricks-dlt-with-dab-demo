@@ -12,13 +12,11 @@ resources:
       photon: false
       libraries:
         - notebook:
-          path: ./src/notebooks/dlt-wikipedia-python.py
+            path: ./notebooks/dlt-wikipedia-python.py
       edition: "ADVANCED"
       clusters:
-        - cluster_key: common-cluster
+        - label: "default"
           num_workers: 1
-          node_type_id: Standard_DS3_v2
-          driver_node_type_id: Standard_DS3_v2
 
 #environments:
 #  development:
