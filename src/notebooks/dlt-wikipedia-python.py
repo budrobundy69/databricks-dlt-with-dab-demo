@@ -19,13 +19,13 @@ def clickstream_raw():
 @dlt.expect("valid_current_page_title", "current_page_title IS NOT NULL")
 @dlt.expect_or_fail("valid_count", "click_count > 0")
 def clickstream_prepared():
-return (
-  dlt.read("clickstream_raw")
-    .withColumn("click_count", expr("CAST(n AS INT)"))
-    .withColumnRenamed("curr_title", "current_page_title")
-    .withColumnRenamed("prev_title", "previous_page_title")
-    .select("current_page_title", "click_count", "previous_page_title")
-)
+  return (
+    dlt.read("clickstream_raw")
+      .withColumn("click_count", expr("CAST(n AS INT)"))
+      .withColumnRenamed("curr_title", "current_page_title")
+      .withColumnRenamed("prev_title", "previous_page_title")
+      .select("current_page_title", "click_count", "previous_page_title")
+  )
 
 # COMMAND ----------
 @dlt.table(
