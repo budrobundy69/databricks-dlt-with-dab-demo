@@ -3,7 +3,7 @@ import dlt
 from pyspark.sql.functions import *
 
 # COMMAND ----------
-json_path = "/databricks-datasets/wikipedia-datasets/data-001/clickstream/raw-uncompressed-json/2015_2_clickstream.json"
+json_path = "dbfs:/databricks-datasets/wikipedia-datasets/data-001/clickstream/raw-uncompressed-json/2015_2_clickstream.json"
 
 # COMMAND ----------
 @dlt.table(
