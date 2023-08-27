@@ -12,7 +12,7 @@ resources:
       photon: false
       libraries:
         - notebook:
-            path: ./notebooks/dlt-wikipedia-python.py
+            path: ./src/notebooks/dlt-wikipedia-python.py
       edition: "ADVANCED"
       clusters:
         - label: "default"
