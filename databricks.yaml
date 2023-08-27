@@ -1,0 +1,24 @@
+# yaml-language-server: $schema=bundle-settings-schema.json
+bundle:
+  name: dlt-wikipedia
+
+resources:
+  pipelines:
+    dlt-wikipedia-pipeline:
+      name: dlt-wikipedia-pipeline
+      development: true
+      continuous: false
+      channel: "CURRENT"
+      photon: false
+      libraries:
+        - notebook:
+            path: ./notebooks/dlt-wikipedia-python.py
+      edition: "ADVANCED"
+      clusters:
+        - label: "default"
+          num_workers: 1
+
+#environments:
+#  development:
+#    workspace:
+#      host: <workspace-url>
